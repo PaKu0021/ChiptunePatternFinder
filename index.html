@@ -3,25 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>拼豆图纸搜索助手</title>
+  <title>Chiptune Finder</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+  <main class="app">
+    <header class="header">
+      <div class="logo">🎮</div>
+      <h1>Chiptune Finder</h1>
+      <p>日本語 → 中文拼豆图纸搜索</p>
+    </header>
 
-<div class="box">
-  <h1>拼豆图纸搜索助手</h1>
+    <section class="search-box">
+      <textarea id="jpInput" placeholder="例：ナルト、ちいかわ、初音ミク、ポケモン"></textarea>
+      <button id="searchBtn">搜索图纸</button>
+    </section>
 
-  <textarea id="jpInput" placeholder="请输入日语，例如：ナルト、ちいかわ、初音ミク"></textarea>
+    <section>
+      <h2>热门 IP</h2>
+      <div id="hotList" class="tag-list"></div>
+    </section>
 
-  <button id="searchBtn">搜索小红书图纸</button>
+    <section id="resultArea" class="result-area"></section>
 
-  <div id="result" class="result"></div>
+    <section>
+      <h2>搜索历史</h2>
+      <div id="historyList" class="tag-list"></div>
+    </section>
 
-  <div class="note">
-    ※ 本页面不会保存或搬运小红书图纸图片，只会生成搜索关键词和跳转链接。
-  </div>
-</div>
+    <section>
+      <h2>收藏关键词</h2>
+      <div id="favoriteList" class="tag-list"></div>
+    </section>
 
-<script src="./app.js"></script>
+    <footer>
+      ※ 本页面只生成搜索关键词和跳转链接，不保存、不搬运小红书图纸图片。
+    </footer>
+  </main>
+
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
